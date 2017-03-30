@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1525591_CO5027.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>AA's Collection</title>
+    <link rel="stylesheet" href="CSS/StyleSheet.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="wrap">
+            <div id="banner">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/swatch/banner1.jpg" Width="100%" />         
+            </div>
+            <div id="navs">
+                <ul id="nav">
+                    <li><asp:HyperLink ID="HyperLink1" runat="server">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Sites/ContactUs.aspx">Contact Us</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server">Collections</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink4" runat="server">History</asp:HyperLink></li>
+                </ul>
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+
+
+
+       
+    </div>
+    </form>
+</body>
+</html>
