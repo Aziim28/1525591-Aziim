@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <title>AA's Collection</title>
-    <link rel="stylesheet" href="CSS/StyleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/Master.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -18,7 +18,7 @@
             </div>
             <div id="navs">
                 <ul id="nav">
-                    <li><asp:HyperLink ID="HyperLink1" runat="server">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Sites/Default.aspx">Home</asp:HyperLink></li>
                     <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Sites/ContactUs.aspx">Contact Us</asp:HyperLink></li>
                     <li><asp:HyperLink ID="HyperLink3" runat="server">Collections</asp:HyperLink></li>
                     <li><asp:HyperLink ID="HyperLink4" runat="server">History</asp:HyperLink></li>
@@ -29,14 +29,18 @@
         
                 </asp:ContentPlaceHolder>
             </div>
-        </div>
-
-
-
-
-
-       
+        </div>  
     </div>
+        
+        <div id="footer">
+ 
+    <p>Abdul Aziim|Copy Right</p>
+
+    <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |  
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |  
+    <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a> 
+
+ </div>
     </form>
 </body>
 </html>

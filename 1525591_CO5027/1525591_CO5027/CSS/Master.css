@@ -5,6 +5,7 @@
     background-color: azure;
 }
 
+/*background*/
 #wrap{
     background-color: darkgrey;
     width: 1100px;
@@ -14,9 +15,10 @@
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
-    overflow: hidden;
-
+    overflow: hidden; 
+    
 }
+
 
 #banner{
    
@@ -60,4 +62,48 @@
 #content{
     padding: 20px;
     min-height: 400px;
+}
+
+#footer {
+    /*width:1100px;
+    text-align: center;
+    margin-top:20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.6);
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:initial;
+    padding-right:initial;*/
+
+    padding-top:5px;
+    background-color: white;
+    text-align: center;
+    width: 1100px;
+    padding-bottom: 20px;
+    margin: auto;
+
+    
+}
+
+#footer p {
+    color:black; 
+    padding-top:2px;
+    padding-bottom:2px;
+    font:12px "verdana";
+    
+    
+}
+
+#footer a {
+    color:blue;
+}
+
+#footer a:link , #footer a:visited, #footer a:active{
+    display: inline-block;
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+#footer a:hover{
+    color: white;
 }

@@ -66,7 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="CSS\ContactUs.css" />
+    <Content Include="CSS\Master.css" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -89,6 +90,9 @@
     <Content Include="swatch\s7.jpg" />
     <Content Include="swatch\s8.jpg" />
     <Content Include="swatch\s9.jpg" />
+    <Content Include="swatch\slideshow1.jpeg" />
+    <Content Include="swatch\slideshow2.jpeg" />
+    <Content Include="swatch\slideshow3.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

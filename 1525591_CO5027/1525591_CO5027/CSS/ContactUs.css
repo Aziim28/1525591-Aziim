@@ -1,0 +1,11 @@
+﻿body {
+    font-family: Arial, 'Times New Roman', sans-serif, Verdana;
+}
+
+#wrap {
+    width: 350px;
+}
+
+#greet iframe {
+    width: 600px; height:450px; border:0; border:0; 
+}
