@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1525591_CO5027.Site" %>
+<!--https://www.youtube.com/watch?v=sXS2lX7XdOs&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 
+on how to cretae the background design-->
 
 <!DOCTYPE html>
 
@@ -6,23 +8,23 @@
 <head runat="server">
     <title>AA's Collection</title>
     <link rel="stylesheet" href="CSS/Master.css" type="text/css" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+   
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         <div id="wrap">
             <div id="banner">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/swatch/banner1.jpg" Width="100%" />         
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/swatch/banner2.jpg"  />         
             </div>
-            <div id="navs">
-                <ul id="nav">
-                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Sites/Default.aspx">Home</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Sites/ContactUs.aspx">Contact Us</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink3" runat="server">Collections</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink4" runat="server">History</asp:HyperLink></li>
+            <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="About.aspx">Info</a></li>
+                    <li><a href="Collection.aspx">Collection</a>
+                    <li><a href="Contact.aspx">Contact</a></li>
                 </ul>
+
             </div>
             <div id="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -34,7 +36,7 @@
         
         <div id="footer">
  
-    <p>Abdul Aziim|Copy Right</p>
+    <p>Abdul Aziim|Copy Right&copy;LCB CO5027</p>
 
     <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |  
     <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |  

@@ -1,9 +1,13 @@
-﻿<%@ Page Title="Contact |AA's Collections" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="_1525591_CO5027.Sites.ContactUs" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+﻿<%@ Page Title="Contact|AA's Collection" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="_1525591_CO5027.Sites.ContactUs" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link href="CSS/ContactUs.css" rel="stylesheet" />
+    <!--https://www.youtube.com/watch?v=ngldKCSXA6U tutorial on to create email and submit button-->
+    <!--https://www.youtube.com/watch?v=Fw1X7HLZfos tutorial on to create email and submit button-->
+
+    <link href="../CSS/Contact.css" rel="stylesheet" />
+
+    <!--contact design-->
+
     <div id="wrap">
              <p>How to contact us? one of the way is by sending comments to us!</p>  
             <table>
@@ -95,11 +99,15 @@
 
             </table>
 
-        <div id="greet">
-            <p>other is by going to our place directly!</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.3214661549628!2d114.92948051448694!3d4.885730896452569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32228ac8ee3f7d03%3A0xcacd96016959ec39!2sLaksamana+College+of+Business!5e0!3m2!1sen!2sbn!4v1491024801128" ></iframe>
+        <!--map-->
+        <!--where i got the location of map-https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.321466154953!2d114.92948051448694!3d4.885730896452569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32228ac8ee3f7d03%3A0xcacd96016959ec39!2sLaksamana+College+of+Business!5e0!3m2!1sen!2sbn!4v1491055498260-->
+        <!--https://www.youtube.com/watch?v=zuklK5Ht56E inserting map-->
+       <div id="headmap">
+           <p>You can also come to our place by following this map!</p>
+       </div>
+        <div id="mymap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.321466154953!2d114.92948051448694!3d4.885730896452569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32228ac8ee3f7d03%3A0xcacd96016959ec39!2sLaksamana+College+of+Business!5e0!3m2!1sen!2sbn!4v1491055498260"></iframe>
         </div>
 
-    </div>
-
+        </div>
 </asp:Content>

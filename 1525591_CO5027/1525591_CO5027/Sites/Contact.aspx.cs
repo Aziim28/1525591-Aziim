@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Mail;
-
+//<!--https://www.youtube.com/watch?v=Fw1X7HLZfos tutorial on to create email and submit button-->
 namespace _1525591_CO5027.Sites
 {
     public partial class ContactUs : System.Web.UI.Page

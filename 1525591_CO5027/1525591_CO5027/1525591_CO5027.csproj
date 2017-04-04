@@ -66,8 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\ContactUs.css" />
+    <Content Include="CSS\Contact.css" />
+    <Content Include="CSS\Default.css" />
     <Content Include="CSS\Master.css" />
+    <Content Include="CSS\SliderSheet.css" />
+    <Content Include="JavaScript.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jssor.slider-23.0.0.mini.js" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -79,20 +84,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Sites\ContactUs.aspx" />
-    <Content Include="swatch\banner1.jpg" />
-    <Content Include="swatch\s1.jpg" />
-    <Content Include="swatch\s2.jpg" />
-    <Content Include="swatch\s3.jpg" />
-    <Content Include="swatch\s4.jpg" />
-    <Content Include="swatch\s5.jpg" />
-    <Content Include="swatch\s6.jpg" />
-    <Content Include="swatch\s7.jpg" />
-    <Content Include="swatch\s8.jpg" />
-    <Content Include="swatch\s9.jpg" />
-    <Content Include="swatch\slideshow1.jpeg" />
-    <Content Include="swatch\slideshow2.jpeg" />
-    <Content Include="swatch\slideshow3.jpg" />
+    <Content Include="Sites\Contact.aspx" />
+    <Content Include="Sites\Default.aspx" />
+    <Content Include="swatch\AAbanner.jpg" />
+    <Content Include="swatch\AAbanner1.jpg" />
+    <Content Include="swatch\AApng.png" />
+    <Content Include="swatch\AApng2.png" />
+    <Content Include="swatch\banner2.jpg" />
+    <Content Include="swatch\slide1.jpg" />
+    <Content Include="swatch\slide2.jpg" />
+    <Content Include="swatch\slide3.jpg" />
+    <Content Include="swatch\slidelogo.png" />
+    <Content Include="swatch\w1.jpg" />
+    <Content Include="swatch\w10.jpg" />
+    <Content Include="swatch\w11.jpg" />
+    <Content Include="swatch\w12.jpg" />
+    <Content Include="swatch\w2.jpg" />
+    <Content Include="swatch\w3.jpg" />
+    <Content Include="swatch\w4.jpg" />
+    <Content Include="swatch\w5.jpg" />
+    <Content Include="swatch\w6.jpg" />
+    <Content Include="swatch\w7.jpg" />
+    <Content Include="swatch\w8.jpg" />
+    <Content Include="swatch\w9.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,12 +121,19 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Sites\ContactUs.aspx.cs">
-      <DependentUpon>ContactUs.aspx</DependentUpon>
+    <Compile Include="Sites\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sites\ContactUs.aspx.designer.cs">
-      <DependentUpon>ContactUs.aspx</DependentUpon>
+    <Compile Include="Sites\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sites\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sites\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

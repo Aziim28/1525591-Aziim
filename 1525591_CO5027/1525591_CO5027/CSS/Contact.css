@@ -1,0 +1,26 @@
+﻿/*https://www.youtube.com/watch?v=ngldKCSXA6U tutorial on to create email and submit button
+https://www.youtube.com/watch?v=Fw1X7HLZfos tutorial on to create email and submit button */
+
+body {
+    font-family: Arial, 'Times New Roman', sans-serif, Verdana;
+}
+
+#wrap table{
+    margin-left:350px;
+}
+
+#wrap p{
+    margin-left:250px;
+      font-weight:bold;
+}
+
+#mymap {
+     width:500px; 
+     height: 330px; 
+     border:1px;
+     margin-left:350px;
+}
+
+#headmap p{
+    margin-left:250px;
+}
