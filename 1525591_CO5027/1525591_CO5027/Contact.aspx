@@ -45,7 +45,7 @@
                             ForeColor="Red"
                              Display="Dynamic"
                             ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
-                            >*</asp:RegularExpressionValidator>
+                            *</asp:RegularExpressionValidator>
                     </td>
                 </tr>
 
