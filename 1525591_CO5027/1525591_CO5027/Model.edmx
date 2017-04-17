@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_1525591_co5027_aziimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="watchCart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="watchCustID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="watchProID" Type="int" Nullable="false" />
+          <Property Name="watchAmount" Type="int" Nullable="false" />
+          <Property Name="watchDateBuy" Type="datetime" />
+          <Property Name="watchIsInCart" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="watchProdType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="watchName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="watchProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="watchProID" Type="int" Nullable="false" />
+          <Property Name="watchName" Type="varchar" MaxLength="100" />
+          <Property Name="watchPrice" Type="int" />
+          <Property Name="watchDescription" Type="text" />
+          <Property Name="watchImage" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_watchCart_watchProdType">
+          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1" />
+          <End Role="watchCart" Type="Self.watchCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="watchProdType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="watchCart">
+              <PropertyRef Name="watchProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_watchProduct_watchProdType">
+          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="watchProdType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="watchProduct">
+              <PropertyRef Name="watchProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_1525591_co5027_aziimModelStoreContainer">
+          <EntitySet Name="watchCart" EntityType="Self.watchCart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="watchProdType" EntityType="Self.watchProdType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="watchProduct" EntityType="Self.watchProduct" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_watchCart_watchProdType" Association="Self.FK_watchCart_watchProdType">
+            <End Role="watchProdType" EntitySet="watchProdType" />
+            <End Role="watchCart" EntitySet="watchCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_watchProduct_watchProdType" Association="Self.FK_watchProduct_watchProdType">
+            <End Role="watchProdType" EntitySet="watchProdType" />
+            <End Role="watchProduct" EntitySet="watchProduct" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_1525591_co5027_aziimModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="watchCart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="watchCustID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="watchProID" Type="Int32" Nullable="false" />
+          <Property Name="watchAmount" Type="Int32" Nullable="false" />
+          <Property Name="watchDateBuy" Type="DateTime" Precision="3" />
+          <Property Name="watchIsInCart" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="watchProdType" Relationship="Self.FK_watchCart_watchProdType" FromRole="watchCart" ToRole="watchProdType" />
+        </EntityType>
+        <EntityType Name="watchProdType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="watchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="watchCarts" Relationship="Self.FK_watchCart_watchProdType" FromRole="watchProdType" ToRole="watchCart" />
+          <NavigationProperty Name="watchProducts" Relationship="Self.FK_watchProduct_watchProdType" FromRole="watchProdType" ToRole="watchProduct" />
+        </EntityType>
+        <EntityType Name="watchProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="watchProID" Type="Int32" Nullable="false" />
+          <Property Name="watchName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="watchPrice" Type="Int32" />
+          <Property Name="watchDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="watchImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="watchProdType" Relationship="Self.FK_watchProduct_watchProdType" FromRole="watchProduct" ToRole="watchProdType" />
+        </EntityType>
+        <Association Name="FK_watchCart_watchProdType">
+          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1" />
+          <End Role="watchCart" Type="Self.watchCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="watchProdType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="watchCart">
+              <PropertyRef Name="watchProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_watchProduct_watchProdType">
+          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="watchProdType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="watchProduct">
+              <PropertyRef Name="watchProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db_1525591_co5027_aziimEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="watchCarts" EntityType="Self.watchCart" />
+          <EntitySet Name="watchProdTypes" EntityType="Self.watchProdType" />
+          <EntitySet Name="watchProducts" EntityType="Self.watchProduct" />
+          <AssociationSet Name="FK_watchCart_watchProdType" Association="Self.FK_watchCart_watchProdType">
+            <End Role="watchProdType" EntitySet="watchProdTypes" />
+            <End Role="watchCart" EntitySet="watchCarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_watchProduct_watchProdType" Association="Self.FK_watchProduct_watchProdType">
+            <End Role="watchProdType" EntitySet="watchProdTypes" />
+            <End Role="watchProduct" EntitySet="watchProducts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_1525591_co5027_aziimModelStoreContainer" CdmEntityContainer="db_1525591_co5027_aziimEntities1">
+          <EntitySetMapping Name="watchCarts">
+            <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.watchCart">
+              <MappingFragment StoreEntitySet="watchCart">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="watchCustID" ColumnName="watchCustID" />
+                <ScalarProperty Name="watchProID" ColumnName="watchProID" />
+                <ScalarProperty Name="watchAmount" ColumnName="watchAmount" />
+                <ScalarProperty Name="watchDateBuy" ColumnName="watchDateBuy" />
+                <ScalarProperty Name="watchIsInCart" ColumnName="watchIsInCart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="watchProdTypes">
+            <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.watchProdType">
+              <MappingFragment StoreEntitySet="watchProdType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="watchName" ColumnName="watchName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="watchProducts">
+            <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.watchProduct">
+              <MappingFragment StoreEntitySet="watchProduct">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="watchProID" ColumnName="watchProID" />
+                <ScalarProperty Name="watchName" ColumnName="watchName" />
+                <ScalarProperty Name="watchPrice" ColumnName="watchPrice" />
+                <ScalarProperty Name="watchDescription" ColumnName="watchDescription" />
+                <ScalarProperty Name="watchImage" ColumnName="watchImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
