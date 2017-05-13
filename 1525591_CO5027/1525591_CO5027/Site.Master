@@ -19,10 +19,11 @@ on how to create the background design-->
             </div>
             <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
                 <ul>
-                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="../Default.aspx">Home</a></li>
                     <li><a href="About.aspx">Info</a></li>
                     <li><a href="Collection.aspx">Collection</a>
-                    <li><a href="Contact.aspx">Contact</a></li>
+                    <li><a href="../Contact.aspx">Contact</a></li>
+                    <li><a href="../ManagementAdmin/Wmanagement.aspx">Management</a></li>
                 </ul>
 
             </div>

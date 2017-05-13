@@ -65,5 +65,56 @@ namespace _1525591_CO5027.Models
                 return "Error:" + e;
             }
         }
+
+        private watchProduct GetwatchProduct(int id)
+        {
+            try
+            {
+                using (db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities())
+                    {
+                    watchProduct watchproduct = db.watchProducts.Find(id);
+                    return watchproduct;
+                    }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        private List<watchProduct> GetAllwatchProducts()
+        {
+            try
+            {
+                using (db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities())
+                {
+                    List<watchProduct> watchproducts = (from x in db.watchProducts
+                                                        select x).ToList();
+                    return watchproducts;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        private List<watchProduct> GetwatchProductsByType(int watchprotypeid)
+        {
+            try
+            {
+                using (db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities())
+                {
+                    List<watchProduct> watchproducts = (from x in db.watchProducts
+                                                        where x.watchProID == watchprotypeid
+                                                        select x).ToList();
+                    return watchproducts;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
     }
 }

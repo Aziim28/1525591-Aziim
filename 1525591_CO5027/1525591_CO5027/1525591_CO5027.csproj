@@ -85,6 +85,7 @@
     <Content Include="js\jssor.slider-23.0.0.mini.js" />
     <Content Include="ManagementAdmin\AdminWatch.aspx" />
     <Content Include="ManagementAdmin\AdminWatchType.aspx" />
+    <Content Include="ManagementAdmin\Wmanagement.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -169,6 +170,13 @@
     </Compile>
     <Compile Include="ManagementAdmin\AdminWatchType.aspx.designer.cs">
       <DependentUpon>AdminWatchType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementAdmin\Wmanagement.aspx.cs">
+      <DependentUpon>Wmanagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagementAdmin\Wmanagement.aspx.designer.cs">
+      <DependentUpon>Wmanagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
