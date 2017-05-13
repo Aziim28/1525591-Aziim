@@ -66,7 +66,7 @@ namespace _1525591_CO5027.Models
             }
         }
 
-        private watchProduct GetwatchProduct(int id)
+        public watchProduct GetwatchProduct(int id)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace _1525591_CO5027.Models
             }
         }
 
-        private List<watchProduct> GetAllwatchProducts()
+        public List<watchProduct> GetAllwatchProducts()
         {
             try
             {
@@ -98,7 +98,7 @@ namespace _1525591_CO5027.Models
                 return null;
             }
         }
-        private List<watchProduct> GetwatchProductsByType(int watchprotypeid)
+        public List<watchProduct> GetwatchProductsByType(int watchprotypeid)
         {
             try
             {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home|AA's Collection" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_1525591_CO5027.Sites.Default" %>
+﻿<%@ Page Title="Home|AA's Collections" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_1525591_CO5027.Sites.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--guidance from-https://www.youtube.com/watch?v=sXS2lX7XdOs&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 -->
     <link href="CSS/Default.css" rel="stylesheet" />

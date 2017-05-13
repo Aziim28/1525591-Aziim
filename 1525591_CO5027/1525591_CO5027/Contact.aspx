@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Contact|AA's Collection" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="_1525591_CO5027.Sites.ContactUs" %>
+﻿<%@ Page Title="Contact|AA's Collections" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="_1525591_CO5027.Sites.ContactUs" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--https://www.youtube.com/watch?v=ngldKCSXA6U tutorial on to create email and submit button-->

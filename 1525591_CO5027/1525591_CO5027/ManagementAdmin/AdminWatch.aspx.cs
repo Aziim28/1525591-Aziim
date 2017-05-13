@@ -15,7 +15,54 @@ namespace _1525591_CO5027.ManagementAdmin
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
                 GetPictures();
+
+                //to check if url contains an id parameter
+                if(!String.IsNullOrWhiteSpace(Request.QueryString["id"]))
+                {
+                    int id = Convert.ToInt32(Request.QueryString["id"]);
+                    FillPage(id);
+                }
+            }
+                
+        }
+
+        protected void btnSubmitP_Click(object sender, EventArgs e)
+        {
+            PwModel pwmodel = new PwModel();
+            watchProduct watchproduct = CreatewatchProduct();
+
+            //checking if the url contains id parameter
+            if(!String.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                //id is exist thus update current row
+                int id = Convert.ToInt32(Request.QueryString["id"]);
+                lblResultP.Text = pwmodel.UpdatewatchProd(id, watchproduct);
+            }
+            else
+            {
+                //id is not exist thus create new row
+                lblResultP.Text = pwmodel.InsertwatchProd(watchproduct);
+            }
+            
+        }
+
+        private void FillPage(int id)
+        {
+            //retrieve selected product from database
+            PwModel pwmodel = new PwModel();
+            watchProduct watchproduct = pwmodel.GetwatchProduct(id);
+
+            //Fill in textboxes
+            txtDescP.Text = watchproduct.watchDescription;
+            txtNameP.Text = watchproduct.watchName;
+            txtPriceP.Text = watchproduct.watchPrice.ToString();
+
+            //set ddl values
+            ddlPicP.SelectedValue = watchproduct.watchImage;
+            ddlTypeP.SelectedValue = watchproduct.watchProID.ToString();
+
         }
 
         private void GetPictures()
@@ -58,12 +105,6 @@ namespace _1525591_CO5027.ManagementAdmin
             return watchproduct;
         }
 
-        protected void btnSubmitP_Click(object sender, EventArgs e)
-        {
-            PwModel pwmodel = new PwModel();
-            watchProduct watchproduct = CreatewatchProduct();
-
-            lblResultP.Text = pwmodel.InsertwatchProd(watchproduct);
-        }
+        
     }
 }
