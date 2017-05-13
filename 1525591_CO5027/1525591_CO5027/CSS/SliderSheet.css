@@ -72,8 +72,8 @@
         .jssora05r:hover { background-position: -190px -40px; }
         .jssora05l.jssora05ldn { background-position: -250px -40px; }
         .jssora05r.jssora05rdn { background-position: -310px -40px; }
-        .jssora05l.jssora05lds { background-position: -10px -40px; opacity: .3; pointer-events: none; }
-        .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3; pointer-events: none; }
+        .jssora05l.jssora05lds { background-position: -10px -40px; opacity: .3;  }
+        .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3;  }
 
 #jssor_1{
     position:relative;

@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace _1525591_CO5027.App_Code
+namespace _1525591_CO5027.Models 
 {
-    public class watchCartModel
+    public class PwCartModel
     {
-        public class watchProdModel
-        {
+      
             public string InsertwatchProd(watchCart watchcart)
             {
                 try
                 {
-                    db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                    db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                     db.watchCarts.Add(watchcart);
                     db.SaveChanges();
 
@@ -29,7 +28,7 @@ namespace _1525591_CO5027.App_Code
             {
                 try
                 {
-                    db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                    db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                     //take object from database
                     watchCart prod = db.watchCarts.Find(id);
 
@@ -53,7 +52,7 @@ namespace _1525591_CO5027.App_Code
             {
                 try
                 {
-                    db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                    db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                     watchCart watchcart = db.watchCarts.Find(id);
 
                     db.watchCarts.Attach(watchcart);
@@ -69,4 +68,3 @@ namespace _1525591_CO5027.App_Code
             }
         }
     }
-}

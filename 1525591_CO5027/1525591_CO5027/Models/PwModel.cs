@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace _1525591_CO5027.App_Code
+namespace _1525591_CO5027.Models
 {
-    public class watchProdModel
+    public class PwModel 
     {
         public string InsertwatchProd(watchProduct watchproduct)
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 db.watchProducts.Add(watchproduct);
                 db.SaveChanges();
 
@@ -27,7 +27,7 @@ namespace _1525591_CO5027.App_Code
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 //take object from database
                 watchProduct prod = db.watchProducts.Find(id);
 
@@ -51,7 +51,7 @@ namespace _1525591_CO5027.App_Code
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 watchProduct watchproduct = db.watchProducts.Find(id);
 
                 db.watchProducts.Attach(watchproduct);

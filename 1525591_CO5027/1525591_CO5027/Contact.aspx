@@ -4,16 +4,16 @@
     <!--https://www.youtube.com/watch?v=ngldKCSXA6U tutorial on to create email and submit button-->
     <!--https://www.youtube.com/watch?v=Fw1X7HLZfos tutorial on to create email and submit button-->
 
-    <link href="../CSS/Contact.css" rel="stylesheet" />
+    <link href="CSS/Contact.css" rel="stylesheet" />
 
     <!--contact design-->
 
-    <div id="wrap">
+    <div id="wrapi">
              <p>How to contact us? one of the way is by sending comments to us!</p>  
             <table>
                 <tr>
                     <td>
-                        <b>Name:</b>
+                        <strong>Name:</strong>
                     </td>
                     <td>
                         <asp:TextBox ID="fieldName" Width="200px" runat="server"></asp:TextBox>
@@ -29,7 +29,7 @@
 
                  <tr>
                     <td>
-                        <b>Email:</b>
+                        <strong>Email:</strong>
                     </td>
                     <td>
                         <asp:TextBox ID="fieldEmail" Width="200px" runat="server"></asp:TextBox>
@@ -51,7 +51,7 @@
 
                  <tr>
                     <td>
-                        <b>Topic:</b>
+                        <strong>About:</strong>
                     </td>
                     <td>
                         <asp:TextBox ID="fieldTopic" Width="200px" runat="server"></asp:TextBox>
@@ -67,7 +67,7 @@
 
                  <tr>
                     <td style="vertical-align:top">
-                        <b>Comments:</b>
+                        <strong>Comments:</strong>
                     </td>
                     <td style="vertical-align:top">
                         <asp:TextBox ID="fieldComments" Width="200px" runat="server" Rows="6" TextMode="MultiLine"></asp:TextBox>

@@ -13,10 +13,10 @@ namespace _1525591_CO5027
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_1525591_co5027_aziimEntities1 : DbContext
+    public partial class db_1525591_co5027_aziimEntities : DbContext
     {
-        public db_1525591_co5027_aziimEntities1()
-            : base("name=db_1525591_co5027_aziimEntities1")
+        public db_1525591_co5027_aziimEntities()
+            : base("name=db_1525591_co5027_aziimEntities")
         {
         }
     

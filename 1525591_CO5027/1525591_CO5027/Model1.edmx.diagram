@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="aff5bbeb861d4b7daa63bee053f47e0a" Name="Diagram1">
+      <Diagram DiagramId="32526e59d6284fea93384a04d447eeea" Name="Diagram1">
         <EntityTypeShape EntityType="db_1525591_co5027_aziimModel.watchCart" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="db_1525591_co5027_aziimModel.watchProdType" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="db_1525591_co5027_aziimModel.watchProduct" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />

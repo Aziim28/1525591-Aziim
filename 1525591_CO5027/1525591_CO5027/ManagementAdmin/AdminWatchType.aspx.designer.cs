@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _1525591_CO5027.Management {
+namespace _1525591_CO5027.ManagementAdmin {
     
     
-    public partial class CollectionManagement {
+    public partial class AdminWatch {
         
         /// <summary>
-        /// namatxt control.
+        /// txtNameW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox namatxt;
+        protected global::System.Web.UI.WebControls.TextBox txtNameW;
         
         /// <summary>
-        /// sendbtn control.
+        /// txtSubmitW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sendbtn;
+        protected global::System.Web.UI.WebControls.Button txtSubmitW;
         
         /// <summary>
-        /// endlabel control.
+        /// lblResultW control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label endlabel;
+        protected global::System.Web.UI.WebControls.Label lblResultW;
     }
 }

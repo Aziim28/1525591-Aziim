@@ -15,7 +15,7 @@ on how to cretae the background design-->
     <div>
         <div id="wrap">
             <div id="banner">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/swatch/banner2.jpg"  />         
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/swatch/banner2.jpg"  alt=""  />         
             </div>
             <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
                 <ul>

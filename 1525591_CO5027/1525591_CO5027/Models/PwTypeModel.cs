@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace _1525591_CO5027.App_Code
+namespace _1525591_CO5027.Models 
 {
-    public class watchProdTypeModel
+    public class PwTypeModel
     {
         public string InsertwatchProd(watchProdType watchproductType)
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 db.watchProdTypes.Add(watchproductType);
                 db.SaveChanges();
 
@@ -27,12 +27,12 @@ namespace _1525591_CO5027.App_Code
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 //take object from database
                 watchProdType prod = db.watchProdTypes.Find(id);
 
                 prod.watchName = watchproductType.watchName;
-               
+
                 db.SaveChanges();
 
                 return watchproductType.watchName + "was just updated";
@@ -47,7 +47,7 @@ namespace _1525591_CO5027.App_Code
         {
             try
             {
-                db_1525591_co5027_aziimEntities1 db = new db_1525591_co5027_aziimEntities1();
+                db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities();
                 watchProdType watchproductType = db.watchProdTypes.Find(id);
 
                 db.watchProdTypes.Attach(watchproductType);

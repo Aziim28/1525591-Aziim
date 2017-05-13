@@ -137,7 +137,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_1525591_co5027_aziimEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_1525591_co5027_aziimEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="watchCarts" EntityType="Self.watchCart" />
           <EntitySet Name="watchProdTypes" EntityType="Self.watchProdType" />
           <EntitySet Name="watchProducts" EntityType="Self.watchProduct" />
@@ -155,7 +155,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_1525591_co5027_aziimModelStoreContainer" CdmEntityContainer="db_1525591_co5027_aziimEntities1">
+        <EntityContainerMapping StorageEntityContainer="db_1525591_co5027_aziimModelStoreContainer" CdmEntityContainer="db_1525591_co5027_aziimEntities">
           <EntitySetMapping Name="watchCarts">
             <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.watchCart">
               <MappingFragment StoreEntitySet="watchCart">
