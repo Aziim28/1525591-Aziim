@@ -5,7 +5,7 @@ using System.Web;
 //guidance from-https://www.youtube.com/watch?v=BKujvivVFKI&index=3&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9
 namespace _1525591_CO5027.Models
 {
-    public class PwModel 
+    public class PwModel
     {
         public string InsertwatchProd(watchProduct watchproduct)
         {
@@ -71,10 +71,10 @@ namespace _1525591_CO5027.Models
             try
             {
                 using (db_1525591_co5027_aziimEntities db = new db_1525591_co5027_aziimEntities())
-                    {
+                {
                     watchProduct watchproduct = db.watchProducts.Find(id);
                     return watchproduct;
-                    }
+                }
             }
             catch (Exception)
             {

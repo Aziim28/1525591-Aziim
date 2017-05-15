@@ -19,11 +19,20 @@ on how to create the background design-->
             </div>
             <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
                 <ul>
-                    <li><a href="../Default.aspx">Home</a></li>
-                    <li><a href="About.aspx">Info</a></li>
-                    <li><a href="Collection.aspx">Collection</a>
+                    <li><a href="../Default.aspx">Collections</a></li>
+                    <li><a href="#">skaper</a>
                     <li><a href="../Contact.aspx">Contact</a></li>
-                    <li><a href="../ManagementAdmin/Wmanagement.aspx">Management</a></li>
+                    <li><a href="../ManagementAdmin/Wmanagement.aspx">Admin</a></li>
+                    
+                    <li style="float:right">
+                        <asp:HyperLink ID="lnkReg" NavigateUrl="~/Administration/Registration.aspx" runat="server">Registration</asp:HyperLink>
+                        <asp:HyperLink ID="litWstatus" runat="server" NavigateUrl="~/WatchShopCart.aspx" /></asp:HyperLink>
+                    </li>
+
+                    <li style="float:right">
+                        <asp:HyperLink ID="lnkLogin" NavigateUrl="~/Administration/Login.aspx" runat="server">Sign In</asp:HyperLink>
+                        <asp:LinkButton ID="btnLogout" runat="server" OnClick="lnkLogout_Click">Sign Out</asp:LinkButton>
+                    </li>
                 </ul>
 
             </div>
@@ -42,7 +51,7 @@ on how to create the background design-->
     <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |  
     <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a> |  
     <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a> |
-    <a href="Login.aspx">AA's Admin</a>
+    <a href="../ManagementAdmin/Wmanagement.aspx">AA's Admin</a>
 
  </div>
     </form>

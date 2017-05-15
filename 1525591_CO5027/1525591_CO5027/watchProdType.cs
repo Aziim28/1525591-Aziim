@@ -17,15 +17,12 @@ namespace _1525591_CO5027
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public watchProdType()
         {
-            this.watchCarts = new HashSet<watchCart>();
             this.watchProducts = new HashSet<watchProduct>();
         }
     
-        public int Id { get; set; }
+        public int id { get; set; }
         public string watchName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<watchCart> watchCarts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<watchProduct> watchProducts { get; set; }
     }

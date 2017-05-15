@@ -12,15 +12,13 @@ namespace _1525591_CO5027
     using System;
     using System.Collections.Generic;
     
-    public partial class watchCart
+    public partial class UsercustInfo
     {
         public int ID { get; set; }
-        public string watchCustID { get; set; }
-        public int watchProID { get; set; }
-        public int watchAmount { get; set; }
-        public Nullable<System.DateTime> watchDateBuy { get; set; }
-        public bool watchIsInCart { get; set; }
-    
-        public virtual watchProduct watchProduct { get; set; }
+        public string GUID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public int PostalCode { get; set; }
     }
 }

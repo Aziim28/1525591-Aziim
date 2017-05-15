@@ -9,9 +9,9 @@
     <p>
         Type:</p>
     <p>
-        <asp:DropDownList ID="ddlTypeP" runat="server" DataSourceID="SqlDataSource" DataTextField="watchName" DataValueField="Id">
+        <asp:DropDownList ID="ddlTypeP" runat="server" DataSourceID="SqlDataSource1" DataTextField="watchName" DataValueField="id">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525591_co5027_aziimConnectionString %>" SelectCommand="SELECT * FROM [watchProdType] ORDER BY [watchName]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525591_co5027_aziimConnectionString %>" SelectCommand="SELECT * FROM [watchProdType] ORDER BY [watchName]"></asp:SqlDataSource>
         </p>
     <p>
         Price:</p>

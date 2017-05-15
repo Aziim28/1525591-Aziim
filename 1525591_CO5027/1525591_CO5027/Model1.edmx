@@ -4,7 +4,18 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_1525591_co5027_aziimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db_1525591_co5027_aziimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UsercustInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PostalCode" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="watchCart">
           <Key>
             <PropertyRef Name="ID" />
@@ -18,9 +29,9 @@
         </EntityType>
         <EntityType Name="watchProdType">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="watchName" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="watchProduct">
@@ -34,12 +45,12 @@
           <Property Name="watchDescription" Type="text" />
           <Property Name="watchImage" Type="varchar" MaxLength="200" />
         </EntityType>
-        <Association Name="FK_watchCart_watchProdType">
-          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1" />
+        <Association Name="FK_watchCart_watchProduct">
+          <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="1" />
           <End Role="watchCart" Type="Self.watchCart" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="watchProdType">
-              <PropertyRef Name="Id" />
+            <Principal Role="watchProduct">
+              <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="watchCart">
               <PropertyRef Name="watchProID" />
@@ -53,7 +64,7 @@
           <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="watchProdType">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="watchProduct">
               <PropertyRef Name="watchProID" />
@@ -61,11 +72,12 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="db_1525591_co5027_aziimModelStoreContainer">
+          <EntitySet Name="UsercustInfo" EntityType="Self.UsercustInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="watchCart" EntityType="Self.watchCart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="watchProdType" EntityType="Self.watchProdType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="watchProduct" EntityType="Self.watchProduct" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_watchCart_watchProdType" Association="Self.FK_watchCart_watchProdType">
-            <End Role="watchProdType" EntitySet="watchProdType" />
+          <AssociationSet Name="FK_watchCart_watchProduct" Association="Self.FK_watchCart_watchProduct">
+            <End Role="watchProduct" EntitySet="watchProduct" />
             <End Role="watchCart" EntitySet="watchCart" />
           </AssociationSet>
           <AssociationSet Name="FK_watchProduct_watchProdType" Association="Self.FK_watchProduct_watchProdType">
@@ -73,8 +85,7 @@
             <End Role="watchProduct" EntitySet="watchProduct" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_1525591_co5027_aziimModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -88,15 +99,14 @@
           <Property Name="watchAmount" Type="Int32" Nullable="false" />
           <Property Name="watchDateBuy" Type="DateTime" Precision="3" />
           <Property Name="watchIsInCart" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="watchProdType" Relationship="Self.FK_watchCart_watchProdType" FromRole="watchCart" ToRole="watchProdType" />
+          <NavigationProperty Name="watchProduct" Relationship="Self.FK_watchCart_watchProduct" FromRole="watchCart" ToRole="watchProduct" />
         </EntityType>
         <EntityType Name="watchProdType">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="watchName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="watchCarts" Relationship="Self.FK_watchCart_watchProdType" FromRole="watchProdType" ToRole="watchCart" />
           <NavigationProperty Name="watchProducts" Relationship="Self.FK_watchProduct_watchProdType" FromRole="watchProdType" ToRole="watchProduct" />
         </EntityType>
         <EntityType Name="watchProduct">
@@ -109,14 +119,15 @@
           <Property Name="watchPrice" Type="Int32" />
           <Property Name="watchDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="watchImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="watchCarts" Relationship="Self.FK_watchCart_watchProduct" FromRole="watchProduct" ToRole="watchCart" />
           <NavigationProperty Name="watchProdType" Relationship="Self.FK_watchProduct_watchProdType" FromRole="watchProduct" ToRole="watchProdType" />
         </EntityType>
-        <Association Name="FK_watchCart_watchProdType">
-          <End Role="watchProdType" Type="Self.watchProdType" Multiplicity="1" />
+        <Association Name="FK_watchCart_watchProduct">
+          <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="1" />
           <End Role="watchCart" Type="Self.watchCart" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="watchProdType">
-              <PropertyRef Name="Id" />
+            <Principal Role="watchProduct">
+              <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="watchCart">
               <PropertyRef Name="watchProID" />
@@ -130,7 +141,7 @@
           <End Role="watchProduct" Type="Self.watchProduct" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="watchProdType">
-              <PropertyRef Name="Id" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="watchProduct">
               <PropertyRef Name="watchProID" />
@@ -141,15 +152,27 @@
           <EntitySet Name="watchCarts" EntityType="Self.watchCart" />
           <EntitySet Name="watchProdTypes" EntityType="Self.watchProdType" />
           <EntitySet Name="watchProducts" EntityType="Self.watchProduct" />
-          <AssociationSet Name="FK_watchCart_watchProdType" Association="Self.FK_watchCart_watchProdType">
-            <End Role="watchProdType" EntitySet="watchProdTypes" />
+          <AssociationSet Name="FK_watchCart_watchProduct" Association="Self.FK_watchCart_watchProduct">
+            <End Role="watchProduct" EntitySet="watchProducts" />
             <End Role="watchCart" EntitySet="watchCarts" />
           </AssociationSet>
           <AssociationSet Name="FK_watchProduct_watchProdType" Association="Self.FK_watchProduct_watchProdType">
             <End Role="watchProdType" EntitySet="watchProdTypes" />
             <End Role="watchProduct" EntitySet="watchProducts" />
           </AssociationSet>
+          <EntitySet Name="UsercustInfoes" EntityType="db_1525591_co5027_aziimModel.UsercustInfo" />
         </EntityContainer>
+        <EntityType Name="UsercustInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -171,7 +194,7 @@
           <EntitySetMapping Name="watchProdTypes">
             <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.watchProdType">
               <MappingFragment StoreEntitySet="watchProdType">
-                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="watchName" ColumnName="watchName" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -185,6 +208,18 @@
                 <ScalarProperty Name="watchPrice" ColumnName="watchPrice" />
                 <ScalarProperty Name="watchDescription" ColumnName="watchDescription" />
                 <ScalarProperty Name="watchImage" ColumnName="watchImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsercustInfoes">
+            <EntityTypeMapping TypeName="db_1525591_co5027_aziimModel.UsercustInfo">
+              <MappingFragment StoreEntitySet="UsercustInfo">
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

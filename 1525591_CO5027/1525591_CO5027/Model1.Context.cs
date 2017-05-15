@@ -28,5 +28,6 @@ namespace _1525591_CO5027
         public virtual DbSet<watchCart> watchCarts { get; set; }
         public virtual DbSet<watchProdType> watchProdTypes { get; set; }
         public virtual DbSet<watchProduct> watchProducts { get; set; }
+        public virtual DbSet<UsercustInfo> UsercustInfoes { get; set; }
     }
 }

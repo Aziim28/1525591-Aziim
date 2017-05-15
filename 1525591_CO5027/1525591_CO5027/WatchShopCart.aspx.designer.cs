@@ -10,69 +10,60 @@
 namespace _1525591_CO5027 {
     
     
-    public partial class Site {
+    public partial class WatchShopCart {
         
         /// <summary>
-        /// form1 control.
+        /// pnlWshopCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlWshopCart;
         
         /// <summary>
-        /// Image1 control.
+        /// litWtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Literal litWtotal;
         
         /// <summary>
-        /// lnkReg control.
+        /// litWtax control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkReg;
+        protected global::System.Web.UI.WebControls.Literal litWtax;
         
         /// <summary>
-        /// litWstatus control.
+        /// litWtotalAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink litWstatus;
+        protected global::System.Web.UI.WebControls.Literal litWtotalAmount;
         
         /// <summary>
-        /// lnkLogin control.
+        /// lnkWproceed control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkLogin;
+        protected global::System.Web.UI.WebControls.LinkButton lnkWproceed;
         
         /// <summary>
-        /// btnLogout control.
+        /// btnWcheckout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLogout;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnWcheckout;
     }
 }
