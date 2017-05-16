@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Management|AA's Collections" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Wmanagement.aspx.cs" Inherits="_1525591_CO5027.ManagementAdmin.Wmanagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!--Guidance from-https://www.youtube.com/watch?v=hkiYuPBwnkQ&index=4&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 -->
+    <!--reference from-https://www.youtube.com/watch?v=hkiYuPBwnkQ&index=4&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 -->
     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="button" PostBackUrl="~/ManagementAdmin/AdminWatch.aspx">Add New Watch</asp:LinkButton>
     <br />
 <br />

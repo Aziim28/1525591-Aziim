@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WatchShopCart.aspx.cs" Inherits="_1525591_CO5027.WatchShopCart" %>
+﻿<%@ Page Title="Cart|AA's Collections" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WatchShopCart.aspx.cs" Inherits="_1525591_CO5027.WatchShopCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--reference from-https://www.youtube.com/watch?v=67fW_kNLghc-->
     <asp:Panel ID="pnlWshopCart" runat="server">
 
     </asp:Panel>

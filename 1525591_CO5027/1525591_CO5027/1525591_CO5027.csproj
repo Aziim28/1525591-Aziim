@@ -128,8 +128,6 @@
     <Content Include="CSS\SliderSheet.css" />
     <Content Include="Default.aspx" />
     <Content Include="JavaScript.js" />
-    <Content Include="js\jquery-1.11.3.min.js" />
-    <Content Include="js\jssor.slider-23.0.0.mini.js" />
     <Content Include="ManagementAdmin\AdminWatch.aspx" />
     <Content Include="ManagementAdmin\AdminWatchType.aspx" />
     <Content Include="ManagementAdmin\Wmanagement.aspx" />

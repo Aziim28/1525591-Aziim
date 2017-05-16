@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+//reference from-https://www.youtube.com/watch?v=mBrxQQJdoHM&t=5s
 namespace _1525591_CO5027.Administration
 {
     public partial class Registration : System.Web.UI.Page
@@ -55,10 +55,10 @@ namespace _1525591_CO5027.Administration
                         wmodel.InsertCustInformation(winfo);
 
 
-                        //to store user in database
+                        //to inser user in database
                         var wauthenticationManager = HttpContext.Current.GetOwinContext().Authentication;
 
-                        //to set to log in new user by using cookie
+                        //to set the log in new user by using cookie
                         var wuserIdentity = wmanager.CreateIdentity(wuser, DefaultAuthenticationTypes.ApplicationCookie);
 
                         //log in the new user and redirec it to default.aspx page

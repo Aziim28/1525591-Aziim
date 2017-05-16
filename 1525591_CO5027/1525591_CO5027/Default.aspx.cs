@@ -45,9 +45,9 @@ namespace _1525591_CO5027
 
                     //add child controls to panel
                     watchPanel.Controls.Add(watchimageButton);
-                    watchPanel.Controls.Add(new Literal {Text = "<br />" });
+                    watchPanel.Controls.Add(new Literal {Text = "" });
                     watchPanel.Controls.Add(lblWatchName);
-                    watchPanel.Controls.Add(new Literal { Text = "<br />" });
+                    watchPanel.Controls.Add(new Literal { Text = "" });
                     watchPanel.Controls.Add(lblwatchPrice);
 
                     //add dynamic panels to static parent panel

@@ -16,6 +16,7 @@
     vertical-align: central;
     padding: 10px;
     clear:both;
+
     
     
 }
@@ -23,11 +24,13 @@
 .productName
 {
     font-size: 19px;
-    font-weight: bold;
+    font-weight: bolder;
+    
 }
 
 .productPrice
 {
     font-family: Arial, Helvetica, sans-serif;
     color: #b6ff00;
+    
 }

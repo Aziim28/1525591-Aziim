@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+//reference from -https://www.youtube.com/watch?v=SFDQ6Lkp8Ec&t=1s
 
 namespace _1525591_CO5027
 {
@@ -41,7 +42,7 @@ namespace _1525591_CO5027
                 }
                 else
                 {
-                    lblResults.Text = "You need to Sign In if you want to order this watch, Thank you.";
+                    lblResults.Text = "You need to Sign In if you want to order this watch or you can register now for free!";
                 }
             }
         }

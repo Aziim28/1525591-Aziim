@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1525591_CO5027.Site" %>
-<!--https://www.youtube.com/watch?v=sXS2lX7XdOs&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 
-on how to create the background design-->
+<!--guidance and retrieve on-https://www.youtube.com/watch?v=sXS2lX7XdOs&list=PLi5N5AdsklLbrs_7GAOAmmgnbKT042-U9 -->
 
 <!DOCTYPE html>
 
@@ -20,8 +19,7 @@ on how to create the background design-->
             <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
                 <ul>
                     <li><a href="../Default.aspx">Collections</a></li>
-                    <li><a href="#">skaper</a>
-                    <li><a href="../Contact.aspx">Contact</a></li>
+                    <li><a href="../Contact.aspx">Email Us</a></li>
                     <li><a href="../ManagementAdmin/Wmanagement.aspx">Admin</a></li>
                     
                     <li style="float:right">
