@@ -18,10 +18,13 @@
             </div>
             <div id="navs"><!--https://www.youtube.com/watch?v=3Z2JthCwhSU for the navigation -->
                 <ul>
-                    <li><a href="../Default.aspx">Collections</a></li>
+                    <!--<li><a href="../Default.aspx">Collections</a></li>
                     <li><a href="../Contact.aspx">Email Us</a></li>
-                    <li><a href="../ManagementAdmin/Wmanagement.aspx">Admin</a></li>
-                    
+                    <li><a href="../ManagementAdmin/Wmanagement.aspx">Admin</a></li>-->
+                    <li><asp:HyperLink ID="Hyperlink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="Hyperlink2" runat="server" NavigateUrl="~/Contact.aspx">Email Us</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="Hyperlink3" runat="server" NavigateUrl="~/ManagementAdmin/Wmanagement.aspx">Home</asp:HyperLink></li>
+
                     <li style="float:right">
                         <asp:HyperLink ID="lnkReg" NavigateUrl="~/Administration/Registration.aspx" runat="server">Registration</asp:HyperLink>
                         <asp:HyperLink ID="litWstatus" runat="server" NavigateUrl="~/WatchShopCart.aspx" /></asp:HyperLink>

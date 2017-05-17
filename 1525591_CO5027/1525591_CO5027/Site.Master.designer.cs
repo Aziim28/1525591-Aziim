@@ -31,6 +31,33 @@ namespace _1525591_CO5027 {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
+        /// Hyperlink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink Hyperlink1;
+        
+        /// <summary>
+        /// Hyperlink2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink Hyperlink2;
+        
+        /// <summary>
+        /// Hyperlink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink Hyperlink3;
+        
+        /// <summary>
         /// lnkReg control.
         /// </summary>
         /// <remarks>

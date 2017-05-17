@@ -35,7 +35,7 @@ namespace _1525591_CO5027
                     //to set childcontrols properties
                     watchimageButton.ImageUrl = "~/swatch/picswatch/" + watchproduct.watchImage;
                     watchimageButton.CssClass = "productImage";
-                    watchimageButton.PostBackUrl = "../Prodak.aspx?id=" + watchproduct.ID;
+                    watchimageButton.PostBackUrl = "~/Prodak.aspx?id=" + watchproduct.ID;
 
                     lblWatchName.Text = watchproduct.watchName;
                     lblWatchName.CssClass = "productName";

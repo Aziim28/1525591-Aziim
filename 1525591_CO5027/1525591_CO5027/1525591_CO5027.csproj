@@ -127,7 +127,6 @@
     <Content Include="CSS\Registration.css" />
     <Content Include="CSS\SliderSheet.css" />
     <Content Include="Default.aspx" />
-    <Content Include="JavaScript.js" />
     <Content Include="ManagementAdmin\AdminWatch.aspx" />
     <Content Include="ManagementAdmin\AdminWatchType.aspx" />
     <Content Include="ManagementAdmin\Wmanagement.aspx" />
